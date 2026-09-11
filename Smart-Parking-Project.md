@@ -141,3 +141,118 @@ The initial project will not include:
 - Providing vehicle repair or roadside-assistance services
 
 These features may be considered in future versions but are not included in the initial project scope.
+
+## 3. Software Requirements Specification Draft
+
+### 3.1 Purpose
+
+The purpose of this Software Requirements Specification is to define the initial functional and nonfunctional requirements for the Smart Parking Platform. These requirements will guide the design and development teams throughout the project.
+
+### 3.2 Intended Users
+
+The system will support the following types of users:
+
+- Drivers
+- Parking facility operators
+- System administrators
+- Finance and billing personnel
+- City transportation personnel
+
+### 3.3 Functional Requirements
+
+The Smart Parking Platform shall:
+
+1. Allow users to create and manage accounts.
+2. Authenticate users securely.
+3. Display available parking locations on an interactive map.
+4. provide real-time parking-space availability.
+5. Allow drivers to search and filter parking options.
+6. Allow drivers to reserve and cancel parking reservations.
+7. Process digital payments securely.
+8. Store reservation histories and receipts.
+9. Send reservation confirmations, reminders, and alerts.
+10. Provide navigation to selected parking locations.
+11. Allow operators to manage parking facilities, availability, and pricing.
+12. Provide occupancy reports and analytics.
+13. Allow administrators to manage users and system activity.
+14. Integrate with external payment and navigation services.
+
+### 3.4 Nonfunctional Requirements
+
+- **Security:** Personal and payment information must be protected through appropriate security controls.
+- **Availability:** The system should be available at all times except during planned maintenance.
+- **Performance:** Searches and availability updates should load within a reasonable amount of time.
+- **Usability:** The mobile and web interfaces should be easy to understand and navigate.
+- **Scalability:** The system should support growth in users, reservations, and parking facilities.
+- **Accessibility:** The platform should follow accepted accessibility guidelines.
+- **Privacy:** User information must be collected, stored, and processed according to applicable privacy requirements.
+- **Compatibility:** The platform should work on commonly used mobile devices and web browsers.
+
+### 3.5 Initial Use Cases
+
+| ID | Use Case | Primary Actor | Description |
+|---|---|---|---|
+| UC-01 | Register an Account | Driver | A driver creates an account using personal and contact information. |
+| UC-02 | Log In | User | A registered user securely signs into the platform. |
+| UC-03 | Manage Profile | Driver | A driver updates personal information, preferences, and account settings. |
+| UC-04 | Manage Vehicles | Driver | A driver adds, edits, or removes vehicle and license-plate information. |
+| UC-05 | Search for Parking | Driver | A driver searches for parking near a destination, address, or current location. |
+| UC-06 | Filter Parking Results | Driver | A driver filters results by price, distance, availability, accessibility, or other preferences. |
+| UC-07 | View Real-Time Availability | Driver | A driver views current parking availability at participating locations. |
+| UC-08 | View Parking Details | Driver | A driver views prices, operating hours, restrictions, amenities, and location information. |
+| UC-09 | Reserve a Parking Space | Driver | A driver selects an available parking option and creates a reservation. |
+| UC-10 | Pay for Parking | Driver | A driver pays for a reservation using an approved digital payment method. |
+| UC-11 | Receive Confirmation | Driver | The system sends the driver a reservation confirmation and digital parking pass. |
+| UC-12 | Navigate to Parking | Driver | A driver opens directions to the selected parking facility through a navigation service. |
+| UC-13 | Modify or Cancel Reservation | Driver | A driver changes or cancels an eligible reservation. |
+| UC-14 | View History and Receipts | Driver | A driver reviews previous reservations, payments, and receipts. |
+| UC-15 | Receive Notifications | Driver | The system sends reminders, expiration warnings, changes, and other parking alerts. |
+| UC-16 | Manage Parking Facility | Parking Operator | An operator updates facility information, hours, spaces, rules, and availability. |
+| UC-17 | Manage Pricing | Parking Operator | An operator creates or changes parking rates for a facility. |
+| UC-18 | View Reports and Analytics | Parking Operator | An operator views occupancy, reservation, payment, and usage reports. |
+| UC-19 | Manage Users | System Administrator | An administrator reviews accounts, permissions, and reported account problems. |
+| UC-20 | Process Refund | Finance Personnel | Authorized personnel review an eligible transaction and issue a refund. |
+
+### 3.6 Example Detailed Use Case
+
+**Use Case ID:** UC-09  
+**Use Case Name:** Reserve a Parking Space  
+**Primary Actor:** Driver  
+
+**Preconditions:**
+
+- The driver has opened the platform.
+- The selected parking facility has an available parking option.
+
+**Main Flow:**
+
+1. The driver searches for parking near a destination.
+2. The system displays available parking options.
+3. The driver selects a parking location.
+4. The driver enters the desired date and time.
+5. The system confirms availability and displays the total price.
+6. The driver confirms the reservation and submits payment.
+7. The system processes the payment.
+8. The system creates the reservation and provides a confirmation.
+
+**Alternative Flows:**
+
+- If the space is no longer available, the system asks the driver to select another option.
+- If payment fails, the system asks the driver to use another payment method.
+
+**Postconditions:**
+
+- The reservation is stored in the driver’s account.
+- The parking inventory is updated.
+- The driver receives a confirmation and digital parking pass.
+
+### 3.7 Assumptions and Dependencies
+
+- Participating parking facilities will provide accurate availability information.
+- Users will have access to a supported mobile device or web browser.
+- Internet access will be required for real-time services.
+- Payment processing will depend on a third-party payment provider.
+- Navigation will depend on an external mapping service.
+- The platform must comply with applicable security, privacy, city, and parking regulations.
+
+This SRS is an initial draft and will be expanded and refined as additional requirements are gathered throughout the semester.
