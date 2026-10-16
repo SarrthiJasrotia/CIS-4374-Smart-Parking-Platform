@@ -150,17 +150,15 @@ All 16 ratings above were reviewed and retained because no implemented controls 
 | P03 | 2 | Actual owner versus fictional scenario roles is now explicit; backlog has one lead per task | Any responsibility/handoff change |
 | P04 | 4 | Approval targets are distinguished from received instructor/sponsor approval | T1/T2 gates or an unresolved requirement question |
 
-### Current issue I-01: Trello plan-choice prompt
+### Issue I-01: Trello access — Closed
 
-**Observed October 15:** the signed-in board displays an expired Premium-trial dialog requiring a subscription or downgrade decision. This is an occurred access/tool issue, distinct from the possible future risks above. Owner: Sarrthi Jasrotia. Impact: the live 58-card board can be inspected, but revised sprint moves/new task cards and clean screenshots cannot currently be completed without an account-plan choice. No account change was made.
-
-**Response underway:** the complete 68-task revised register and sprint plan are maintained in GitHub, linked from README, with written current-board observations; the new screenshot remains unpublished pending explicit approval. **Closure condition:** account owner resolves the plan prompt, revised cards/lists are synchronized, and new unobstructed sprint screenshots are saved. This issue does not imply application functionality is complete or change the modeled budget.
+Resolved October 15, 2026. The trial prompt no longer blocks editing. All 68 tasks are synchronized across Sprints 1–4: 20, 31, 15, and 2 cards respectively. Every card includes story references, estimates, dependencies, and acceptance criteria. No implementation tasks have been marked complete. The issue is closed without changing the project scope or modeled budget.
 
 ## 8. Updated communication and change record
 
 Weekly video updates must explain which existing sections changed, what was finished, and why. The October 15 update covers documentation and planning work only. Use [Project Update](Project-Update-2026-10-15.md) for the change list and short script. Required course submissions remain the student’s responsibility; no instructor message or Canvas submission is asserted.
 
-For each review, record date, actual completed evidence, next tasks, risk/issue ID, accountable owner, due date, and effect on the schedule/budget. Store decisions in GitHub and link cards when Trello editing resumes. A change affecting scope, the Dec. 11 target, the 828-hour estimate, or the $36,949 modeled funding must include an impact assessment and modeled sponsor decision; ask the instructor when course requirements are unclear. Avoid recording fictional approvals as actual approvals.
+For each review, record date, actual completed evidence, next tasks, risk/issue ID, accountable owner, due date, and effect on the schedule/budget. Store decisions in GitHub and keep related Trello cards linked to the GitHub documents. A change affecting scope, the Dec. 11 target, the 828-hour estimate, or the $36,949 modeled funding must include an impact assessment and modeled sponsor decision; ask the instructor when course requirements are unclear. Avoid recording fictional approvals as actual approvals.
 
 
 ### Delivery issue I-02: GitHub write permissions
