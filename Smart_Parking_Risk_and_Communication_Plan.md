@@ -2,13 +2,14 @@
 
 **Course:** CIS 4374  
 **Prepared by:** Sarrthi Jasrotia  
-**Date:** October 1, 2026
+**Date:** October 1, 2026  
+**Last reviewed:** October 15, 2026
 
 ## 1. Purpose and planning assumptions
 
 This document identifies risks that could affect the Smart Parking App and defines how they will be monitored, addressed, and reported. It builds on the product backlog containing login, driver and operator interfaces, backend, and reporting tasks.
 
-This plan covers a course prototype. Live parking sensors, production payments, and paid services are not assumed to be available or required. Risks concerning external data or paid services apply if those features are adopted. Development roles describe responsibilities; they do not imply separate people. Sarrthi Jasrotia owns the risks until responsibilities are formally reassigned.
+This plan covers a course prototype. The October 15 SRS explicitly uses simulated/operator-entered availability and mock/sandbox payments. Live parking sensors and production payments are excluded; any paid service must fit the modeled cost allowance. Risks concerning external data or paid services apply if those features are adopted. Development roles describe responsibilities; they do not imply separate people. Sarrthi Jasrotia owns the risks until responsibilities are formally reassigned.
 
 ## 2. Risks by category
 
@@ -105,7 +106,7 @@ All entries are initially **Open**: the risk has been identified, and the listed
 
 ## 6. Communication plan
 
-The cadence below is proposed for the project. For an individual project, development check-ins are self-reviews documented on Trello. If collaborators are assigned, use the same cadence as short meetings and record participants and task owners. Instructor updates follow the course's required submission channel and deadlines.
+The cadence below is proposed for the project; it is not a record that meetings or tests have taken place. The fictional role staffing/RACI models the company scenario, while Sarrthi Jasrotia remains the actual coursework owner. PM coordinates reviews; BE leads data/security responses, FE leads UI, QA verifies acceptance, and DO leads deployment/recovery within the scenario. The named risk owner remains Sarrthi for every entry.  For an individual project, development check-ins are self-reviews documented on Trello. If collaborators are assigned, use the same cadence as short meetings and record participants and task owners. Instructor updates follow the course's required submission channel and deadlines.
 
 | Activity / responsibility area | Participants or audience | Cadence / duration | Reporting method | Required information | Accountable owner |
 | --- | --- | --- | --- | --- | --- |
@@ -125,3 +126,43 @@ The cadence below is proposed for the project. For an individual project, develo
 - **Weekly updates** state what was completed, what remains, the most significant risks, and the next planned steps. Report actual results rather than marking planned responses as completed.
 - **Check-in notes** use four fields: completed work, next work, blocker or risk ID, and action owner.
 - **Meeting notes**, if meetings occur, include the date, attendees, decisions, action owners, and target dates. Add notes within one working day.
+
+## 7. October 15 review of all risk entries
+
+All 16 ratings above were reviewed and retained because no implemented controls or test results are available to justify a reduced residual score. All entries remain **Open**; a planned mitigation is not a completed control. The following links make each response actionable against the revised backlog and schedule.
+
+| Risk | Current score | Updated response link / review finding | Next checkpoint or trigger |
+|---|---:|---|---|
+| T01 | 6 | FR-04; PARK-12/39/66: timestamp, simulated label, single availability calculation | Sprint 1 view checks; Sprint 2 booking/status changes |
+| T02 | 6 | NFR-03; PARK-40/46/65: atomic conflict, cancellation and modification cases | Before T6 acceptance Nov. 13 |
+| T03 | 6 | NFR-01/07; PARK-09/36/64/67: role and ownership tests, synthetic data | Sprint 1 and release gate |
+| T04 | 6 | FR-14; PARK-31–33/45/67: version request/response fields and failure cases | T2 design gate; T9 integration |
+| S01 | 6 | Backlog now estimates 68 tasks; points are provisional with no measured velocity | Weekly compare actual hours with 828-hour model; reforecast at twice task estimate |
+| S02 | 6 | Backlog records prerequisite tasks; T6 needs auth, availability and facility contract | Before sprint selection and whenever a prerequisite is blocked |
+| S03 | 4 | Ten new task definitions fill existing requirement gaps; production services remain excluded | Any request outside revised SRS or budget |
+| S04 | 9 | PARK-46/67; verify during development and protect Dec. 2–8 test window | Each feature acceptance; full core check at least two days before known submission |
+| F01 | 4 | $300 modeled hosting/database allowance; actual service usage/spend not evidenced | Before deployment/service activation and weekly thereafter |
+| F02 | 4 | Mock payments and in-app notices avoid required production-provider fees; $150 tool allowance | Any optional paid map, messaging or payment service proposal |
+| F03 | 3 | Physical sensors/gates explicitly excluded in SRS, WBS and budget | Reopen scope decision if hardware is requested; no purchase assumed |
+| F04 | 3 | Git preserves documents; PARK-67/68 add database restore and handoff checks | Weekly backup check and before T11 |
+| P01 | 4 | Resolve unfamiliar work with small prototypes and documented API contracts | Any blocker lasting a planned work session |
+| P02 | 6 | Weekday baseline includes Nov. 26–27; actual availability is not confirmed | Weekly capacity review; reforecast affected T9 work if unavailable |
+| P03 | 2 | Actual owner versus fictional scenario roles is now explicit; backlog has one lead per task | Any responsibility/handoff change |
+| P04 | 4 | Approval targets are distinguished from received instructor/sponsor approval | T1/T2 gates or an unresolved requirement question |
+
+### Current issue I-01: Trello plan-choice prompt
+
+**Observed October 15:** the signed-in board displays an expired Premium-trial dialog requiring a subscription or downgrade decision. This is an occurred access/tool issue, distinct from the possible future risks above. Owner: Sarrthi Jasrotia. Impact: the live 58-card board can be inspected, but revised sprint moves/new task cards and clean screenshots cannot currently be completed without an account-plan choice. No account change was made.
+
+**Response underway:** the complete 68-task revised register and sprint plan are maintained in GitHub, linked from README, with written current-board observations; the new screenshot remains unpublished pending explicit approval. **Closure condition:** account owner resolves the plan prompt, revised cards/lists are synchronized, and new unobstructed sprint screenshots are saved. This issue does not imply application functionality is complete or change the modeled budget.
+
+## 8. Updated communication and change record
+
+Weekly video updates must explain which existing sections changed, what was finished, and why. The October 15 update covers documentation and planning work only. Use [Project Update](Project-Update-2026-10-15.md) for the change list and short script. Required course submissions remain the student’s responsibility; no instructor message or Canvas submission is asserted.
+
+For each review, record date, actual completed evidence, next tasks, risk/issue ID, accountable owner, due date, and effect on the schedule/budget. Store decisions in GitHub and link cards when Trello editing resumes. A change affecting scope, the Dec. 11 target, the 828-hour estimate, or the $36,949 modeled funding must include an impact assessment and modeled sponsor decision; ask the instructor when course requirements are unclear. Avoid recording fictional approvals as actual approvals.
+
+
+### Delivery issue I-02: GitHub write permissions
+
+The connected integration can read the repository but rejects both Git-tree and file-content writes with `403 Resource not accessible by integration`. No revision was published remotely. The complete revised Markdown files are supplied together for upload. Owner: Sarrthi Jasrotia. Closure: publish all eight revised Markdown files and verify the resulting repository contents; no application completion is implied.
