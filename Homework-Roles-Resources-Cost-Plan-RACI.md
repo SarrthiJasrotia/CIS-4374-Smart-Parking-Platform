@@ -2,13 +2,14 @@
 
 **Course:** CIS 4374  
 **Project:** Smart Parking Platform  
-**Student:** Sarrthi Jasrotia
+**Student:** Sarrthi Jasrotia  
+**Last reviewed:** October 15, 2026
 
 ## 1. Project Scope and Planning Assumptions
 
 The Smart Parking Platform helps drivers view parking availability, reserve a space, and manage their reservations. Parking administrators can update spaces and review parking activity. This plan covers requirements, design, development, testing, and deployment of a working prototype.
 
-The planning period is three months (12 weeks). Each full-time resource has 480 available hours, based on 40 hours per week. Allocation percentages represent each person's average commitment across the entire project; work can be concentrated in particular phases. All staff names, skill levels, hourly rates, and costs are fictional planning assumptions. Labor is valued even if students perform the work without receiving payment.
+The planning period is September 21–December 11, 2026: 12 weeks divided into three four-week budget periods, called Month 1–3 below. Month 1 is Sep. 21–Oct. 16, Month 2 is Oct. 19–Nov. 13, and Month 3 is Nov. 16–Dec. 11. These are project periods, not calendar months. Each full-time resource has 480 available hours, based on 40 hours per week. Allocation percentages represent each person's average commitment across the entire project; work can be concentrated in particular phases. All staff names, skill levels, hourly rates, and costs are fictional planning assumptions. Labor is valued even if students perform the work without receiving payment.
 
 Availability data will be simulated or entered by administrators. Physical parking sensors, gate equipment, production payment processing, and ongoing support after the prototype are outside this budget.
 
@@ -51,7 +52,7 @@ The labor subtotal is $33,120. Nonlabor costs total $470. Therefore, the base co
 
 ## 4. Monthly Budgeted Cash Flow
 
-Month 1 emphasizes planning and design. Month 2 emphasizes development and integration. Month 3 emphasizes testing, fixes, deployment, and handoff. Labor is assumed to be paid in the month worked; the domain and tool allowances are paid in Month 1.
+Month 1 emphasizes planning and design. Its 60 FE and 60 BE hours cover wireframes, architecture, database/API contracts, estimates, and design reviews rather than feature implementation, which starts October 19. QA prepares cases; DevOps plans/configures the development environment. Month 2 emphasizes development and component checks; full system integration starts November 23 in Month 3. Month 3 emphasizes testing, fixes, deployment, and handoff. Labor is assumed to be paid in the month worked; the domain and tool allowances are paid in Month 1.
 
 | Cost Item | Month 1 | Month 2 | Month 3 | Total |
 | --- | ---: | ---: | ---: | ---: |
@@ -92,6 +93,9 @@ Role abbreviations match the resource plan. Every activity has exactly one accou
 | Build reservation creation and cancellation | C | C | R | A/R | C | I | I |
 | Implement authentication and role-based access | I | I | R | A/R | C | C | I |
 | Build administrator parking management screens | C | C | A/R | R | C | I | I |
+| Build mock payments, refunds and receipts | C | C | R | A/R | C | C | I |
+| Build reports, exports and administration | C | C | R | A/R | C | I | I |
+| Maintain user stories and backlog | A/R | C | C | C | C | I | I |
 | Execute functional, integration, and regression tests | I | C | R | R | A/R | C | I |
 | Conduct user acceptance testing and approve release | R | C | C | C | R | C | A |
 | Configure hosting, backups, and deployment | I | I | C | R | C | A/R | I |
@@ -99,3 +103,12 @@ Role abbreviations match the resource plan. Every activity has exactly one accou
 | Approve scope changes and contingency use | R | C | C | C | C | C | A |
 
 The sponsor approves funding, major scope changes, and final acceptance. The project manager coordinates delivery and maintains the plan. Technical roles own their respective deliverables, while QA owns test execution and reports defects. Developers implement fixes and QA verifies them before release.
+
+## 6. October 15 resource, cost and responsibility review
+
+- The 828 hours, $33,590 base, $3,359 reserve, and $36,949 total are unchanged. No actual expense, earned-value figure, or spent contingency is asserted.
+- Fictional staff assignments model a software company for the assignment. Sarrthi Jasrotia remains the actual coursework/document owner; the seven names are not classmates or real hires. Sponsor approvals in the RACI are scenario gates, distinct from instructor review.
+- The system’s driver/operator/admin/finance actors are application permissions, not additional paid project staff. A seeded authorized operator can demonstrate finance actions; admin uses a separate restricted account.
+- Hours cover the mock integrations, reporting, acceptance checks, documentation, and handoff defined in the revised WBS. Production operations and hardware remain excluded.
+- Review remaining hours weekly against completed evidence. If forecast base cost exceeds $33,590 or effort exceeds 828 hours, document the cause, affected task, schedule effect, and requested reserve amount. The modeled sponsor authorizes reserve use; a larger funding requirement needs a revised baseline.
+- Resource allocations are averages. Check peak workload before accepting a sprint; reduce parallel work or reforecast if a role exceeds 40 hours in any week. Sprint points are relative estimates and do not replace the 828-hour model.
