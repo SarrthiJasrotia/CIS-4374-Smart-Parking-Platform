@@ -53,7 +53,7 @@ US-06 is also an acceptance checklist on PARK-13/15/39; US-12 on PARK-63; US-15 
 
 Points are new relative planning estimates (1 small, 2 ordinary, 3 multi-component, 5 complex); no historical velocity is assumed. They do not claim measured effort. H = required foundation/core/security; M = supporting prototype feature. Every task below is planned with completion unverified. Dependency IDs refer to PARK tasks.
 
-| Task | Existing card title / new planned task | Story | Lead | Priority | Points | Revised sprint | Dependencies |  |
+| Task | Existing card title / new planned task | Story | Lead | Priority | Points | Revised sprint | Dependencies | Original board location |
 |---|---|---|---|---|---:|---|---|---|
 | PARK-01 | Create user registration form | US-01 | FE | H | 2 | 1 | PARK-31 | Sprint 1 |
 | PARK-02 | Validate required registration fields | US-01 | FE | H | 1 | 1 | PARK-01 | Sprint 1 |
