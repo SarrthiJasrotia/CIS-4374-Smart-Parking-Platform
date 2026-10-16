@@ -4,6 +4,7 @@
 **Student:** Sarrthi Jasrotia  
 **Company:** WE ARE Software Corp.  
 **Date:** September 10, 2026  
+**Last reviewed:** October 15, 2026  
 
 ## 1. Competitive Analysis
 
@@ -78,7 +79,7 @@ Parking operators will have access to an administrative dashboard for monitoring
 
 ### Company Introduction
 
-WE ARE Software Corp. is a fictional software development company that designs technology solutions for businesses and the public. The company has been selected to plan and manage the development of a Smart Parking Platform. For this project, the company has unlimited theoretical resources and funding but must complete the project within the semester timeline.
+WE ARE Software Corp. is a fictional software development company that designs technology solutions for businesses and the public. The company has been selected to plan and manage the development of a Smart Parking Platform. The initial scenario allowed unlimited theoretical resources. The current planning baseline instead uses the explicit 828-hour resource estimate and $36,949 funding requirement in the cost plan, within the semester timeline. These are fictional estimates, not actual spending or staffing commitments.
 
 ### Project Background
 
@@ -115,6 +116,9 @@ The primary stakeholders include:
 
 ### In Scope
 
+The semester deliverable is a responsive web prototype, usable on desktop and mobile browsers. References to real-time availability mean refreshed simulated or operator-entered records, with a visible update timestamp. Payment, refund, receipt, and spending features use synthetic transactions in a sandbox or mock service; they never charge real money. Maps may use sample coordinates and navigation links. Notifications may be demonstrated in the application without paid email/SMS services. The broader product vision above is retained as context.
+
+
 The initial system will include:
 
 - User registration and authentication
@@ -134,6 +138,8 @@ The initial system will include:
 
 The initial project will not include:
 
+- Native iOS/Android application releases and production service-level guarantees
+- Live sensor or gate integration, real card storage, live charges, and ongoing production support
 - Construction or physical maintenance of parking facilities
 - Manufacturing parking sensors or gate equipment
 - Issuing government parking citations
@@ -160,33 +166,39 @@ The system will support the following types of users:
 
 ### 3.3 Functional Requirements
 
-The Smart Parking Platform shall:
+The prototype shall meet the following requirements. Acceptance criteria and task links appear in [User Stories and Backlog](User-Stories-and-Backlog.md).
 
-1. Allow users to create and manage accounts.
-2. Authenticate users securely.
-3. Display available parking locations on an interactive map.
-4. provide real-time parking-space availability.
-5. Allow drivers to search and filter parking options.
-6. Allow drivers to reserve and cancel parking reservations.
-7. Process digital payments securely.
-8. Store reservation histories and receipts.
-9. Send reservation confirmations, reminders, and alerts.
-10. Provide navigation to selected parking locations.
-11. Allow operators to manage parking facilities, availability, and pricing.
-12. Provide occupancy reports and analytics.
-13. Allow administrators to manage users and system activity.
-14. Integrate with external payment and navigation services.
+| ID | Requirement |
+|---|---|
+| FR-01 | Register accounts and maintain profiles and vehicles; reject invalid fields and duplicate emails. |
+| FR-02 | Authenticate users, support logout and a simulated reset flow, and enforce role and record ownership checks on the server. |
+| FR-03 | Show seeded parking locations on a map or equivalent map view with destination search and price/distance filters. |
+| FR-04 | Calculate availability for the requested interval from space status and active reservations; label simulated data and show its last refresh time. |
+| FR-05 | Show facility rates, operating hours, restrictions, capacity, and accessibility details. |
+| FR-06 | Create, view, modify, and cancel reservations; reject invalid intervals and overlapping bookings atomically. |
+| FR-07 | Demonstrate successful and failed sandbox/mock payments and eligible refunds without storing real card data. |
+| FR-08 | Show reservation histories, synthetic receipts, and downloadable history for the signed-in driver only. |
+| FR-09 | Display in-app confirmation, reminders, and cancellation/change notices linked to the correct reservation. |
+| FR-10 | Open directions to a selected facility through an external navigation link using seeded coordinates. |
+| FR-11 | Allow authorized operators to maintain their facilities, capacity, space status, rates, and reservation activity. |
+| FR-12 | Provide date-filtered occupancy, reservation, cancellation, simulated revenue, and duration reports and CSV export. |
+| FR-13 | Allow authorized administrators to manage accounts/roles and inspect an activity log. |
+| FR-14 | Isolate external services behind mock/sandbox interfaces and show a recoverable error when an integration fails. |
 
 ### 3.4 Nonfunctional Requirements
 
-- **Security:** Personal and payment information must be protected through appropriate security controls.
-- **Availability:** The system should be available at all times except during planned maintenance.
-- **Performance:** Searches and availability updates should load within a reasonable amount of time.
-- **Usability:** The mobile and web interfaces should be easy to understand and navigate.
-- **Scalability:** The system should support growth in users, reservations, and parking facilities.
-- **Accessibility:** The platform should follow accepted accessibility guidelines.
-- **Privacy:** User information must be collected, stored, and processed according to applicable privacy requirements.
-- **Compatibility:** The platform should work on commonly used mobile devices and web browsers.
+These are planned acceptance targets; no performance, security, or accessibility results are claimed yet.
+
+| ID | Area | Measurable acceptance target |
+|---|---|---|
+| NFR-01 | Security | Unauthenticated, wrong-role, and other-driver requests are rejected; passwords are hashed; secrets are excluded from Git; only synthetic data is used. |
+| NFR-02 | Performance | On a documented local test environment with 100 seeded spaces and 20 concurrent simulated users, at least 95% of search/availability requests finish within 2 seconds. Record timing evidence. |
+| NFR-03 | Data integrity | Two simultaneous requests for the same space and overlapping interval produce exactly one confirmed reservation; cancellation restores availability once. |
+| NFR-04 | Usability and accessibility | Core registration, search, reservation, and cancellation flows work by keyboard, have visible focus and labeled fields, and show readable errors; verify contrast and a 375px viewport. |
+| NFR-05 | Compatibility | Core flows pass on current Chrome and Safari at desktop and mobile viewport sizes; record tested versions. |
+| NFR-06 | Reliability and recovery | Failed API/service requests display an error and retry path without duplicate reservations; a seeded database backup can be restored in a documented rehearsal. |
+| NFR-07 | Privacy | Screens, exports, and logs do not expose another driver’s data or real payment details; driver exports are restricted by ownership. |
+| NFR-08 | Maintainability | README documents setup, environment variable names, seed/reset steps, and test commands; API request/response examples are versioned. |
 
 ### 3.5 Initial Use Cases
 
@@ -201,7 +213,7 @@ The Smart Parking Platform shall:
 | UC-07 | View Real-Time Availability | Driver | A driver views current parking availability at participating locations. |
 | UC-08 | View Parking Details | Driver | A driver views prices, operating hours, restrictions, amenities, and location information. |
 | UC-09 | Reserve a Parking Space | Driver | A driver selects an available parking option and creates a reservation. |
-| UC-10 | Pay for Parking | Driver | A driver pays for a reservation using an approved digital payment method. |
+| UC-10 | Pay for Parking | Driver | A driver demonstrates a successful or failed mock/sandbox payment; no real charge is made. |
 | UC-11 | Receive Confirmation | Driver | The system sends the driver a reservation confirmation and digital parking pass. |
 | UC-12 | Navigate to Parking | Driver | A driver opens directions to the selected parking facility through a navigation service. |
 | UC-13 | Modify or Cancel Reservation | Driver | A driver changes or cancels an eligible reservation. |
@@ -211,7 +223,7 @@ The Smart Parking Platform shall:
 | UC-17 | Manage Pricing | Parking Operator | An operator creates or changes parking rates for a facility. |
 | UC-18 | View Reports and Analytics | Parking Operator | An operator views occupancy, reservation, payment, and usage reports. |
 | UC-19 | Manage Users | System Administrator | An administrator reviews accounts, permissions, and reported account problems. |
-| UC-20 | Process Refund | Finance Personnel | Authorized personnel review an eligible transaction and issue a refund. |
+| UC-20 | Process Refund | Finance Personnel | An authorized operator acting in the finance role reviews an eligible synthetic transaction and demonstrates a mock refund. |
 
 ### 3.6 Example Detailed Use Case
 
@@ -221,7 +233,7 @@ The Smart Parking Platform shall:
 
 **Preconditions:**
 
-- The driver has opened the platform.
+- The driver is authenticated and has selected a vehicle.
 - The selected parking facility has an available parking option.
 
 **Main Flow:**
@@ -232,13 +244,16 @@ The Smart Parking Platform shall:
 4. The driver enters the desired date and time.
 5. The system confirms availability and displays the total price.
 6. The driver confirms the reservation and submits payment.
-7. The system processes the payment.
-8. The system creates the reservation and provides a confirmation.
+7. The system records a mock/sandbox payment result and confirms the booking only once; failure releases any temporary hold.
+8. The system commits the reservation using an atomic conflict check, updates availability, and displays an in-app confirmation and synthetic receipt.
 
 **Alternative Flows:**
 
 - If the space is no longer available, the system asks the driver to select another option.
-- If payment fails, the system asks the driver to use another payment method.
+- If a mock payment fails, no confirmed booking or paid receipt is created.
+- If two drivers confirm the same space at once, only one succeeds; the other receives an availability error.
+- If the interval is invalid or outside facility hours, the request is rejected with a useful message.
+- Modification rechecks availability atomically before replacing the previous interval; cancellation is allowed before the arrival time and is idempotent.
 
 **Postconditions:**
 
@@ -248,11 +263,13 @@ The Smart Parking Platform shall:
 
 ### 3.7 Assumptions and Dependencies
 
-- Participating parking facilities will provide accurate availability information.
+- Availability uses seeded/simulated or operator-entered records, not a live sensor feed.
 - Users will have access to a supported mobile device or web browser.
 - Internet access will be required for real-time services.
-- Payment processing will depend on a third-party payment provider.
-- Navigation will depend on an external mapping service.
+- Mock/sandbox payment and refund interfaces provide repeatable success and failure cases without real charges.
+- Navigation uses an external directions link; the prototype remains usable if the map service is unavailable.
 - The platform must comply with applicable security, privacy, city, and parking regulations.
 
-This SRS is an initial draft and will be expanded and refined as additional requirements are gathered throughout the semester.
+### 3.8 Review and change control
+
+This October 15 revision aligns the SRS with the existing prototype budget and risk plan. Sarrthi Jasrotia maintains the coursework; the staffing names in the resource plan are fictional scenario roles. Requirements and design approval milestones are planned gates, not evidence of instructor approval. Every scope change must identify affected requirement/story, WBS item, PARK task, risk, schedule, and cost before implementation. See the backlog for implementation status and acceptance evidence requirements.
