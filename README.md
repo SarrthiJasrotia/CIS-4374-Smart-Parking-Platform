@@ -33,8 +33,8 @@ Verified October 15: **58 live cards — 15 Sprint 1 and 43 Product Backlog**. T
 
 A current screenshot was captured locally. Publishing it to this public repository was blocked by automatic approval review pending explicit image-publication approval; it is not included here.
 
-### Earlier board screenshot — historical baseline
+### Updated board screenshot — historical baseline
 
-<img width="1596" height="1728" alt="image" src="https://github.com/user-attachments/assets/5cc49d7c-2521-4d9d-9844-dce9f720d3f9" />
 
-This earlier image shows the prior board setup; it is not a screenshot of the revised sprint plan.
+<img width="2924" height="1716" alt="image" src="https://github.com/user-attachments/assets/bf0f8a94-0573-467d-9fe1-7706f5b53264" />
+
