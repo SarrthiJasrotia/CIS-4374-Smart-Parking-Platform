@@ -219,4 +219,4 @@ gantt
 | Sprint 3 | Nov. 16–Nov. 27 | Finish T8 by Nov. 20; begin T9 Nov. 23; reporting reconciliation and integration checks |
 | Sprint 4 | Nov. 30–Dec. 11 | Finish T9 Dec. 1, T10 Dec. 2–8, and T11 Dec. 9–11 |
 
-As of October 15, the planning documents have been revised. Implementation, milestone approvals, and test completion remain unverified. The live Trello list is an earlier sprint selection; the revised selection and all task dependencies are recorded in the backlog. No schedule slip or completed development is invented from the calendar alone.
+As of October 15, the planning documents have been revised. Implementation, milestone approvals, and test completion remain unverified. The live Trello board matches the revised sprint selection and task dependencies documented in the backlog. No schedule slip or completed development is invented from the calendar alone.
