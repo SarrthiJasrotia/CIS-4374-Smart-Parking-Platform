@@ -29,10 +29,7 @@ A planned responsive web prototype for finding parking, checking simulated avail
 
 [Smart Parking Trello board](https://trello.com/b/F7a0wRUi/smart-parking-platform)
 
-Verified October 15: **58 live cards — 15 Sprint 1 and 43 Product Backlog**. The revised GitHub register has **68 planned tasks**, including ten requirements-coverage tasks not yet added to Trello. Revised Sprint 1 selects 20 tasks; these moves are not yet applied to the board. An expired-trial account-plan prompt blocks editing. See issue I-01 in the risk plan and the synchronization checklist in the backlog.
-
-A current screenshot was captured locally. Publishing it to this public repository was blocked by automatic approval review pending explicit image-publication approval; it is not included here.
-
+Trello is synchronized with all 68 planned tasks. Sprint 1 contains 20 cards, Sprint 2 contains 31, Sprint 3 contains 15, and Sprint 4 contains 2. Every card includes story references, estimates, dependencies, and acceptance criteria. No implementation tasks have been marked complete.
 ### Updated board screenshot — historical baseline
 
 
