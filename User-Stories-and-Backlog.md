@@ -6,9 +6,9 @@
 
 ## 1. Baseline and actual status
 
-The live [Trello board](https://trello.com/b/F7a0wRUi/smart-parking-platform) was inspected October 15. It contains **58 existing cards: 15 in Sprint 1 and 43 in Product Backlog**. These list placements are planning selections, not proof of implementation. The repository contains planning documents and no executable application or test results at the review baseline. All implementation completion is therefore **unverified**.
+The [Trello board](https://trello.com/b/F7a0wRUi/smart-parking-platform) now contains all **68 planned tasks**: **20 in Sprint 1, 31 in Sprint 2, 15 in Sprint 3, and 2 in Sprint 4**.
 
-The revised plan below preserves PARK-01–PARK-58 and adds PARK-59–PARK-68 to cover requirements missing from the board. There are **68 planned tasks**, not 68 live Trello cards. Trello editing is blocked by an expired Premium trial dialog requiring a plan choice. No subscription or account-plan change was made. The revised sprint placement below is documented here and awaits synchronization to Trello; it is not misrepresented as live board state.
+PARK-01–PARK-58 were retained, and PARK-59–PARK-68 were added. Every card includes story references, estimates, dependencies, and acceptance criteria. The board matches the revised sprint plan. Implementation remains **unverified**, and no tasks have been marked complete.
 
 Actual coursework ownership is Sarrthi Jasrotia. FE/BE/QA/DO/PM denote the fictional responsibility roles defined in the resource/RACI plan, not additional students. Every task has one lead role; support roles follow the RACI.
 
@@ -143,8 +143,6 @@ No work is marked complete by this update. At each review record actual hours, a
 
 ## 6. Trello evidence and synchronization checklist
 
-A current Trello screenshot was captured locally but is not published here. Automatic approval review requires explicit approval before publishing the new image to this public repository.
+All 68 tasks are synchronized with Trello. Sprint 1 contains 20 cards, Sprint 2 contains 31, Sprint 3 contains 15, and Sprint 4 contains 2.
 
-The local screenshot is a current capture, not an edited board or proof of completed tasks. The README retains the earlier unobstructed board image for historical context.
-
-When account access permits editing, synchronize the revised 20-task Sprint 1 selection, add PARK-59–68, record story/lead/acceptance/dependencies in each card, and create Sprint 2–4 lists or labels matching this register. Keep unstarted tasks out of Done. Capture the full board and individual sprint views after synchronization. Until then, this register is the revised planning source and Trello remains the observed historical 58-card board.
+Every card includes story references, estimates, dependencies, and acceptance criteria. No implementation tasks have been marked complete.
