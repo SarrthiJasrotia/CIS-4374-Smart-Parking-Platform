@@ -273,3 +273,6 @@ These are planned acceptance targets; no performance, security, or accessibility
 ### 3.8 Review and change control
 
 This October 15 revision aligns the SRS with the existing prototype budget and risk plan. Sarrthi Jasrotia maintains the coursework; the staffing names in the resource plan are fictional scenario roles. Requirements and design approval milestones are planned gates, not evidence of instructor approval. Every scope change must identify affected requirement/story, WBS item, PARK task, risk, schedule, and cost before implementation. See the backlog for implementation status and acceptance evidence requirements.
+
+## Stakeholder Analysis: Power–Interest Grid
+<img width="626" height="728" alt="image" src="https://github.com/user-attachments/assets/e6716468-e2d1-4bea-a487-30752c25ba96" />
